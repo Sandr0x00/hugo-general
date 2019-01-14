@@ -1,0 +1,2 @@
+{{ $res := ( .Page.Resources.GetMatch  ( .Get "file" )) }}
+<a href="{{ $res.RelPermalink }}">{{ if .Get "fa" }}<i class="{{ .Get "fa" }}"></i>&nbsp;{{ end }}{{ .Get "text" | safeHTML }}</a>

@@ -1,11 +1,1 @@
-{{ if .IsNamedParams }}
-<a href='{{ .Get "link" }}' target='_blank'>{{ .Get "text" }}&nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-{{ else }}
-<a href='{{ .Get 0 }}' target='_blank'>
-    {{ if .Get 1 }}
-    {{ .Get 1 }}
-    {{ else }}
-    {{ .Get 0 }}
-    {{ end }}
-    &nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
-{{ end }}
+{{ if .IsNamedParams }}<a href='{{ .Get "link" }}' target='_blank'>{{ .Get "text" }}&nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>{{ else }}<a href='{{ .Get 0 }}' target='_blank'>{{ if .Get 1 }}{{ .Get 1 }}{{ else }}{{ .Get 0 }}{{ end }}&nbsp;<i class="fas fa-external-link-alt" aria-hidden="true"></i></a>{{ end }}
