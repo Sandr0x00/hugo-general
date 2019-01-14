@@ -6,8 +6,10 @@
 {{ end }}
 {{ end }}
 {{ $placeholder := $image.Resize "64x q30" }}
-<div class="placeholder pic" data-large="{{ $image.RelPermalink }}">
-    <img src="{{ $placeholder.RelPermalink }}" class="img-small">
-    <div style="padding-bottom: {{div (mul $image.Height 100) $image.Width}}%;"></div>
-    {{ if .Get 1 }}<span class="caption">{{ .Get 1 | safeHTML }}</span>{{ end }}
-</div>
+<a data-fancybox="{{ .Page.File.Dir }}" href="{{ $image.RelPermalink }}">
+    <div class="placeholder pic" data-large="{{ $image.RelPermalink }}">
+        <img src="{{ $placeholder.RelPermalink }}" class="img-small">
+        <div style="padding-bottom: {{div (mul $image.Height 100) $image.Width}}%;"></div>
+        {{ if .Get 1 }}<span class="caption">{{ .Get 1 | safeHTML }}</span>{{ end }}
+    </div>
+</a>
