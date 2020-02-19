@@ -1,0 +1,21 @@
+{
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "no-compare-neg-zero": "error",
+    "no-alert": "error",
+    "eqeqeq": ["error", "always", {"null": "ignore"}],
+    "no-var": "error",
+    "no-trailing-spaces": "error",
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "brace-style": ["error", "1tbs"],
+    "semi": ["warn", "always"]
+  }
+}
